@@ -27,6 +27,11 @@ class Tools {
    */
   Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
 
+
+  Eigen::MatrixXd F(float dt);
+
+  Eigen::MatrixXd Q(float dt);
+
 };
 
 #endif  // TOOLS_H_

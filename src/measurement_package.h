@@ -3,6 +3,8 @@
 
 #include "Eigen/Dense"
 
+#include <iostream>
+
 class MeasurementPackage {
  public:
   enum SensorType{
@@ -13,6 +15,7 @@ class MeasurementPackage {
   long long timestamp_;
 
   Eigen::VectorXd raw_measurements_;
-};
 
+  friend std::ostream& operator<<(std::ostream& os, const MeasurementPackage& mp);
+};
 #endif // MEASUREMENT_PACKAGE_H_
